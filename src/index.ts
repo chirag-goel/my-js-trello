@@ -1,4 +1,5 @@
 import Board from './modules/board';
+import './assets/scss/index.scss';
 
 (function () {
 	'use strict'

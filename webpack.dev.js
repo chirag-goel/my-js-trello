@@ -17,6 +17,13 @@ module.exports = {
       test: /\.tsx?$/,
       use: 'ts-loader',
       exclude: /node_modules/
+    },{
+      test: /\.scss$/,
+      use: [
+          "style-loader",
+          "css-loader",
+          "sass-loader",
+      ]
     }]
   },
   resolve: {
@@ -24,9 +31,6 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([{
-        from: './src/assets/css/index.css',
-        to: `${BUILD_DIR}/css/index.css`
-    },{
         from: './src/assets/img/cross.png',
         to: `${BUILD_DIR}/img/cross.png`
     },]),
